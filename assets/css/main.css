@@ -2937,44 +2937,44 @@ input, select, textarea {
 			transform: rotate(360deg);
 		}
 	}
-
 	.gallery {
 		display: flex;
 		flex-wrap: wrap;
-		margin: -1.25rem 0 0 -1.25rem;
-		width: calc(100% + 1.25rem);
+		margin: -0.5rem 0 0 -0.5rem;
+		width: calc(100% + 0.5rem);
 	}
-
-		.gallery a {
-			border-bottom: 0;
-			display: block;
-			margin: 1.25rem 0 0 1.25rem;
-			outline: 0;
-			position: relative;
-			width: calc(50% - 1.25rem);
-		}
-
-			.gallery a img {
-				display: block;
-				height: 25vw;
-				min-height: 18rem;
-				object-fit: cover;
-				object-position: center;
-				width: 100%;
-			}
-
-			.gallery a.landscape {
-				width: 100%;
-			}
-
-				.gallery a.landscape img {
-					height: 30vw;
-				}
-
-			.gallery a.portrait img {
-				height: 30vw;
-			}
-
+	
+	.gallery a {
+		border-bottom: 0;
+		display: block;
+		margin: 0.5rem 0 0 0.5rem;
+		outline: 0;
+		position: relative;
+		width: calc(33.33% - 0.5rem); /* Adjusted for smaller images */
+		aspect-ratio: 16 / 9;
+	}
+	
+	.gallery a img {
+		display: block;
+		width: 100%;
+		height: auto; /* Maintain aspect ratio */
+		object-fit: cover;
+		object-position: center;
+	}
+	
+	.gallery a.landscape {
+		width: 100%;
+	}
+	
+	.gallery a.landscape img {
+		aspect-ratio: 16 / 9;
+	}
+	
+	.gallery a.portrait img {
+		aspect-ratio: 9 / 16; /* For portrait images */
+	}
+	
+	
 		.gallery .modal {
 			display: -moz-flex;
 			display: -webkit-flex;
